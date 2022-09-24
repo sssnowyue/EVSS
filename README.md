@@ -1,2 +1,2 @@
-# EVSS
-ProgSD Team Project Specification   E-Vehicle Share System
+# EVSS - E-Vehicle Share System
+ProgSD Team Project Specification
