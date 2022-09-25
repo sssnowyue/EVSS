@@ -6,7 +6,8 @@ Testing for push to a new branch
 
 ## Testing commit （Hang）
 - Functionality of the web will be developed by group members **individually**. 
-> **Note:** Group work arrangement will be released in week 2.
+> **Note:** Group work arrangement will be released in week 2.**
+> **test:** can I push it successfully?
 
 ## Testing(Yue)
 
