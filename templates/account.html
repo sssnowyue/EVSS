@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  account
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-6 mb-5 text-center">
+        <div class="alert alert-primary mb-1 text-center" role="alert">
+          <b>Order List</b>
+        </div>
+        <div class="list-group mt-2">
+        order:
+        {% for order in orders %}
+          <div class="card mb-3">
+            <h5 class="card-header">{{ order.id }}:{{ order.state }}</h5>
+            <div class="card-body">
+              <h4 class="card-title">amount:{{ order.amount }}</h4>
+              <p class="card-text">time:{{ order.create_time }}——{{ order.finish_time }}</p>
+                {% if order.state == 1 %}
+                <a href="{{ url_for('user.user_payment',order_id=order.id) }}" class="btn btn-primary">payment</a>
+                {% elif order.state == 2 %}
+                <a class="btn btn-disable">completed</a>
+                {% elif order.state == 0 %}
+                <a href="{{ url_for('user.user_return',order_id=order.id) }}" class="btn btn-primary">return</a>
+                {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+
+      <div class="col-6 mb-5 text-center">
+        <div class="alert alert-success mb-1 text-center" role="alert">
+          <b>Balance:{{ user.balance }}￡</b>
+        </div>
+        <form method="POST" action="{{ url_for('user.user_popup') }}">
+          <div class="form-group mt-2">
+            <label for="exampleFormControlSelect1">Recharge Amount</label>
+            <select class="form-control" name="amount">
+              <option value=5 selected>5￡</option>
+              <option value=10 selected>10￡</option>
+              <option value=20>20￡</option>
+              <option value=50>50￡</option>
+            </select>
+          </div>
+          <div class="form-group my-5 mt-5 text-center">
+            <button type="submit" class="m-auto btn btn-outline-primary">Top Up</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="row" style="height: 150px">
+    </div>
+  </div>
+{% endblock %}

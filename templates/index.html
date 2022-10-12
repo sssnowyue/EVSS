@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  E-Vehicle Share System
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="row mt-3">
+      <div class="jumbotron" style="background-color: #ffffff">
+          <h1 class="display-4">
+            Hello, Welcome to E-Vehicle Share System!
+          </h1>
+          <p class="lead">
+            Here you can check the location of nearby vehicles, rent a bike easily and conveniently, return id with one click, plus there are two types of vehicles available for you to use.
+          </p>
+          <hr class="my-4">
+          <p><a href="#" class="badge badge-primary">1</a>&nbsp;&nbsp;We offer two types of vehicles: E-bike and bike.</p>
+          <p><a href="#" class="badge badge-primary">2</a>&nbsp;&nbsp;E-bike charges £ 0.2 per minute.</p>
+          <p><a href="#" class="badge badge-primary">3</a>&nbsp;&nbsp;Bike charges £ 0.1 per minute.</p>
+        </div>
+    </div>
+    <div class="row">
+
+      <div class="col-7 mb-5 text-center">
+        <div class="alert alert-primary mb-1 text-center" role="alert">
+          <b>Vehicle Map</b>
+        </div>
+        <div id='map'></div>
+          <script>
+            // 设置地图容器
+            var map = new BMapGL.Map('map')
+            // 添加工具控件
+            map.addControl(new BMapGL.NavigationControl())
+            // new BMap.Point(经度, 维度)创建一个地图点，绘制地图设置地图中心和缩放
+            map.centerAndZoom(new BMapGL.Point(119.331398,39.897445), 15)
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', "http://localhost:5000/select");
+            xhr.responseType = 'json';
+            xhr.onload = function() {
+              xhr.response.map((item) => {
+                var pos = new BMapGL.Point(item.longitude, item.latitude)
+                var marker = new BMapGL.Marker(pos)
+                map.addOverlay(marker)
+                marker.setLabel(new BMapGL.Label("I am bike No." + item.id, {offset:new BMapGL.Size(10,-10)}));
+                map.setCenter(pos)
+                return item
+              })
+            };
+            xhr.enerror = function() {
+              console.log("Oops, error");
+            };
+            xhr.send();
+          </script>
+      </div>
+
+      <div class="col-5">
+        <div class="alert alert-primary mb-1 text-center" role="alert">
+          <b>Vehicle List</b>
+        </div>
+        <div class="list-group">
+          {% for bike in bikes %}
+            <div class="card mb-1">
+{#            <div class="card" style="width: 18rem;">#}
+              <div class="card-body">
+                {% if bike.type == 1 %}
+                  <h5 class="card-title">No.{{ bike.id  }}-Bike</h5>
+                {% else %}
+                  <h5 class="card-title">No.{{ bike.id  }}-E-Bike</h5>
+                {% endif %}
+
+                {% if bike.state == 1 %}
+                  <h6 class="card-subtitle mb-2 text-muted">Available / charge:{{ bike.charge }}%</h6>
+                {% elif bike.state == 2 %}
+                  <h6 class="card-subtitle mb-2 text-muted">Being used / charge:{{ bike.charge }}%</h6>
+                {% elif bike.state == 3 %}
+                  <h6 class="card-subtitle mb-2 text-muted">Repairing / charge:{{ bike.charge }}%</h6>
+                {% elif bike.state == 4 %}
+                  <h6 class="card-subtitle mb-2 text-muted">Charging / charge:{{ bike.charge }}%</h6>
+                {% else %}
+                  <h6 class="card-subtitle mb-2 text-muted">Disabled / charge:{{ bike.charge }}%</h6>
+                {% endif %}
+                <p class="card-text">latitude:{{ bike.latitude }} / longitude:{{ bike.longitude }}</p>
+                <p class="card-text"></p>
+                <a href="{{ url_for('user.user_rent',bike_id=bike.id) }}" class="card-link">Rent</a>
+                <a href="{{ url_for('user.user_return',bike_id=bike.id) }}" class="card-link">Return</a>
+                <a href="{{ url_for('user.user_repair',bike_id=bike.id) }}" class="card-link">Report</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
