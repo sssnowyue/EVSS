@@ -1,0 +1,15 @@
+alembic==1.7.5
+Flask
+Flask_Mail
+Flask_Migrate
+flask_paginate
+Flask_SQLAlchemy
+requests==2.24.0
+SQLAlchemy==1.4.30
+Werkzeug==2.0.1
+WTForms==2.2.1
+paddlehub~=2.2.0
+jieba~=0.42.1
+flask_cors
+flask_apscheduler
+pymysql

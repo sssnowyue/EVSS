@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}login{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <div class="row my-5">
+      <div class="col"></div>
+      <div class="col">
+        <form method="POST" action="{{ url_for('general.login') }}">
+          <div class="form-group">
+            <label for="exampleInputEmail1">E-mail account</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We promise not to use your information for other purposes.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          {% for message in get_flashed_messages() %}
+          <div class="form-group">
+            <div class="text-danger">{{ message }}</div>
+          </div>
+          {% endfor %}
+
+          <div class="form-group text-center">
+            <p></p>
+            <p></p>
+            <a href="{{ url_for('general.reset') }}">Forgot password?</a>
+            <p></p>
+            <button type="submit" class="btn btn-primary btn-block">Login now</button>
+          </div>
+        </form>
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="row" style="height: 300px"></div>
+  </div>
+{% endblock %}
