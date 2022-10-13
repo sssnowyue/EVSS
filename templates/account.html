@@ -9,6 +9,25 @@
 
 {% block body %}
   <div class="container">
+  <div style="margin-top: 20px;">
+  {% for message, category in get_flashed_messages(with_categories=true) %}
+      {% if category == "error" %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>{{ message }}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      {% elif category == "success" %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{ message }}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      {% endif %}
+  {% endfor %}
+  </div>
     <div class="row mt-5">
       <div class="col-6 mb-5 text-center">
         <div class="alert alert-primary mb-1 text-center" role="alert">
@@ -18,33 +37,63 @@
         order:
         {% for order in orders %}
           <div class="card mb-3">
-            <h5 class="card-header">{{ order.id }}:{{ order.state }}</h5>
+            {% if order.state == 0 %}
+              <h5 class="card-header">Order{{ order.id }} : Processing</h5>
+            {% elif order.state == 1 %}
+              <h5 class="card-header">Order{{ order.id }} : Waiting for Payment</h5>
+            {% elif order.state == 2 %}
+              <h5 class="card-header">Order{{ order.id }} : Complete</h5>
+            {% endif %}
+
             <div class="card-body">
-              <h4 class="card-title">amount:{{ order.amount }}</h4>
-              <p class="card-text">time:{{ order.create_time }}——{{ order.finish_time }}</p>
-                {% if order.state == 1 %}
+              {% if order.state == 0 %}
+                <h4 class="card-title">Processing</h4>
+              {% else %}
+                <h4 class="card-title">amount:{{ order.amount }}</h4>
+              {% endif %}
+              {% if order.state == 0 %}
+                <p class="card-text">{{ order.create_time }} —— Now</p>
+              {% else %}
+                <p class="card-text">{{ order.create_time }} —— {{ order.finish_time }}</p>
+              {% endif %}
+              {% if order.state == 1 %}
                 <a href="{{ url_for('user.user_payment',order_id=order.id) }}" class="btn btn-primary">payment</a>
-                {% elif order.state == 2 %}
+              {% elif order.state == 2 %}
                 <a class="btn btn-disable">completed</a>
-                {% elif order.state == 0 %}
-                <a href="{{ url_for('user.user_return',order_id=order.id) }}" class="btn btn-primary">return</a>
-                {% endif %}
+              {% elif order.state == 0 %}
+                <button onclick="return_bike({{ order.id }})" class="btn btn-primary">return</button>
+              {% endif %}
+            <script>
+              function return_bike(order_id) {
+                if(!navigator.geolocation) {
+                  console.log('你的浏览器不支持地理位置')
+                } else {
+                  navigator.geolocation.getCurrentPosition((position) => {
+                    console.log("success")
+                    const latitude  = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    window.location.href = "/user/return?order_id=" + order_id + "&end_latitude=" + latitude + "&end_longitude=" + longitude;
+                  }, () => {
+                    console.log('无法获取你的位置')
+                  });
+                }
+              }
+            </script>
             </div>
           </div>
         {% endfor %}
         </div>
       </div>
-
       <div class="col-6 mb-5 text-center">
         <div class="alert alert-success mb-1 text-center" role="alert">
           <b>Balance:{{ user.balance }}￡</b>
         </div>
-        <form method="POST" action="{{ url_for('user.user_popup') }}">
+        <form method="POST" action="/user/popup">
           <div class="form-group mt-2">
             <label for="exampleFormControlSelect1">Recharge Amount</label>
             <select class="form-control" name="amount">
               <option value=5 selected>5￡</option>
-              <option value=10 selected>10￡</option>
+              <option value=10>10￡</option>
               <option value=20>20￡</option>
               <option value=50>50￡</option>
             </select>

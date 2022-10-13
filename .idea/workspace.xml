@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9d8cad19-84e0-4645-bec9-817ba7ad5ec1" name="变更" comment="变更">
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/.idea/E-Vehicle Share System.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/blueprints/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/blueprints/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/blueprints/initialization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/blueprints/manager/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/blueprints/operator/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/blueprints/user/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/blueprints/user/general.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/blueprints/user/index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/blueprints/user/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/migrations/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/migrations/versions/5127c6edc9b2_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/migrations/versions/8660b8acb173_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/migrations/versions/a65ab5a1cff8_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/ssl/DigiCertGlobalRootCA.crt.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/bootstrap-4.6.1/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/css/init.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/image/advert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/image/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/image/qq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/image/weibo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/image/weixin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/jquery/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/jquery/jquery.3.6.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/js/change.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/static/js/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/templates/account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/templates/reset.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E-Vehicle Share System/utils.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2G2Yyr10oJLcCUVs1g4g7uFPHYo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.app">
+    <configuration name="vehicle_system.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/vehicle_system.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="d950b098-2827-4025-ba4e-7cc95e3b99a2" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="E-Vehicle Share System_v2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (../E-Vehicle Share System(1)/app.py)" type="Python.FlaskServer" nameIsGenerated="true">
+      <option name="additionalOptions" value="--host=127.0.0.1 --port=4999" />
+      <module name="E-Vehicle Share System_v2" />
+      <option name="target" value="$PROJECT_DIR$/../E-Vehicle Share System(1)/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Database Script.vehicle_system.sql" />
+      <item itemvalue="Flask server.Flask (../E-Vehicle Share System(1)/app.py)" />
+      <item itemvalue="Python.app" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Database Script.vehicle_system.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="9d8cad19-84e0-4645-bec9-817ba7ad5ec1" name="变更" comment="" />
+      <created>1665588403364</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665588403364</updated>
+      <workItem from="1665588404655" duration="7000" />
+      <workItem from="1665588454373" duration="2410000" />
+      <workItem from="1665599866846" duration="7125000" />
+      <workItem from="1665609649675" duration="453000" />
+      <workItem from="1665652077008" duration="3319000" />
+      <workItem from="1665658229513" duration="152000" />
+      <workItem from="1665665432529" duration="2262000" />
+      <workItem from="1665680936611" duration="2921000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/E_Vehicle_Share_System_v2_1$app.coverage" NAME="app Coverage Results" MODIFIED="1665606250151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/E_Vehicle_Share_System_v2$app.coverage" NAME="app 覆盖结果" MODIFIED="1665589970038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/E_Vehicle_Share_System_v2_4$app.coverage" NAME="app Coverage Results" MODIFIED="1665683150203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/E_Vehicle_Share_System_v2_3$app.coverage" NAME="app Coverage Results" MODIFIED="1665657725906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/E_Vehicle_Share_System_v2_2$Flask_____E_Vehicle_Share_System_1__app_py_.coverage" NAME="Flask (../E-Vehicle Share System(1)/app.py) 覆盖结果" MODIFIED="1665610024422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>

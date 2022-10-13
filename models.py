@@ -7,10 +7,11 @@ from utils import db
 3.flask db upgrade
 '''
 
+
 class MailCaptchaModel(db.Model):
     __tablename__ = 'email_captcha'
-    id = db.Column(db.Integer, primary_key=True,autoincrement=True)
-    email = db.Column(db.String(100), nullable=True,unique=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    email = db.Column(db.String(100), nullable=True, unique=True)
     captcha = db.Column(db.String(10), nullable=True)
     create_time = db.Column(db.Date, default=date.today())
 
@@ -34,6 +35,7 @@ class BikeModel(db.Model):
     charge = db.Column(db.Integer, default=100)
     latitude = db.Column(db.Float, default=0)
     longitude = db.Column(db.Float, default=0)
+
 
 class VehicleOrderModel(db.Model):
     __tablename__ = 'vehicle_order'
@@ -67,7 +69,7 @@ class OperationModel(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     # orm框架层面：建立关系
     bike = db.relationship("BikeModel", backref="operations")
-    user = db.relationship("UserModel",backref=db.backref("operations",order_by=create_time.desc()))
+    user = db.relationship("UserModel", backref=db.backref("operations", order_by=create_time.desc()))
 
 
 class TopupOrderModel(db.Model):
@@ -78,4 +80,4 @@ class TopupOrderModel(db.Model):
     # 数据库层面：建立外键
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
     # orm框架层面：建立关系
-    user = db.relationship("UserModel",backref=db.backref("topup_orders",order_by=create_time.desc()))
+    user = db.relationship("UserModel", backref=db.backref("topup_orders", order_by=create_time.desc()))

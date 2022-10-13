@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block head %}
+  <script src="{{ url_for('static',filename='js/register.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -21,6 +22,11 @@
 {#              <option value="女">女</option>#}
 {#            </select>#}
 {#          </div>#}
+          <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">2-10 characters required.</small>
+          </div>
           <div class="form-group">
             <label for="exampleInputEmail1">E-mail account</label>
             <input type="email" class="form-control" name="email" aria-describedby="emailHelp">

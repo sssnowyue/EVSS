@@ -63,5 +63,3 @@ class ResetForm(wtforms.Form):
 
 
 
-
-

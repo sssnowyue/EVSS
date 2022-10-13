@@ -11,7 +11,7 @@ function bindCaptchaBtnClick(){
         //通过js发送网络请求：ajax——Async JavaScript And XML(json)
         //url_for只能在jinja2中使用
         $.ajax({
-            url:"/user/captcha",
+            url:"/general/captcha",
             method:"POST",
             data:{
                 "email":email

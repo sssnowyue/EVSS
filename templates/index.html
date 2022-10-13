@@ -37,7 +37,27 @@
             // 添加工具控件
             map.addControl(new BMapGL.NavigationControl())
             // new BMap.Point(经度, 维度)创建一个地图点，绘制地图设置地图中心和缩放
-            map.centerAndZoom(new BMapGL.Point(119.331398,39.897445), 15)
+            map.centerAndZoom(new BMapGL.Point(-4.2410459, 55.8639824), 15)
+
+            if (!navigator.geolocation) {
+              // $('#result_l').text('你的浏览器不支持地理位置')
+            } else {
+              // $('#result_l').text('定位中……')
+              navigator.geolocation.getCurrentPosition(position => {
+                var pos = new BMapGL.Point(position.coords.longitude, position.coords.latitude)
+                var marker = new BMapGL.Marker(pos)
+                var geo = new BMapGL.Geocoder();
+                map.addOverlay(marker)
+                map.setCenter(pos)
+                geo.getLocation(pos, (res) => {
+                  console.log(res)
+                  marker.setLabel(new BMapGL.Label("My Location: " + res.address, {offset:new BMapGL.Size(10,-10)}));
+                })
+              }, () => {
+                // $('#result_l').text('无法获取你的位置');
+              },
+              {enableHighAccuracy: true})
+            }
 
             var xhr = new XMLHttpRequest();
             xhr.open('GET', "http://localhost:5000/select");
@@ -48,7 +68,6 @@
                 var marker = new BMapGL.Marker(pos)
                 map.addOverlay(marker)
                 marker.setLabel(new BMapGL.Label("I am bike No." + item.id, {offset:new BMapGL.Size(10,-10)}));
-                map.setCenter(pos)
                 return item
               })
             };
@@ -87,12 +106,29 @@
                 {% endif %}
                 <p class="card-text">latitude:{{ bike.latitude }} / longitude:{{ bike.longitude }}</p>
                 <p class="card-text"></p>
-                <a href="{{ url_for('user.user_rent',bike_id=bike.id) }}" class="card-link">Rent</a>
-                <a href="{{ url_for('user.user_return',bike_id=bike.id) }}" class="card-link">Return</a>
+                <a onclick="rent_bike({{ bike.id }})" class="card-link">Rent</a>
+
+                {#<a href="{{ url_for('user.user_return',bike_id=bike.id) }}" class="card-link">Return</a>#}
                 <a href="{{ url_for('user.user_repair',bike_id=bike.id) }}" class="card-link">Report</a>
               </div>
             </div>
           {% endfor %}
+            <script>
+              function rent_bike(bike_id) {
+                if(!navigator.geolocation) {
+                  console.log('你的浏览器不支持地理位置')
+                } else {
+                  navigator.geolocation.getCurrentPosition((position) => {
+                    console.log("success")
+                    const latitude  = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    window.location.href = "/user/rent?bike_id=" + bike_id + "&user_latitude=" + latitude + "&user_longitude=" + longitude;
+                  }, () => {
+                    console.log('无法获取你的位置')
+                  });
+                }
+              }
+            </script>
         </div>
       </div>
     </div>
