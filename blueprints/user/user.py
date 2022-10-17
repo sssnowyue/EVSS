@@ -62,7 +62,7 @@ def user_rent():
 
 def pure_rent(bike_id, user_id, user_latitude, user_longitude):
     bike = BikeModel.query.filter_by(id=bike_id, state=1).first()
-    if abs(bike.latitude - float(user_latitude)) < 0.1 and abs(bike.longitude - float(user_longitude)) < 0.1:
+    if abs(bike.latitude - float(user_latitude)) < 0.00001 and abs(bike.longitude - float(user_longitude)) < 0.00001:
         # insert a new vehicle_order to VehicleOrder
         new_trans = VehicleOrderModel(bike_id=bike_id, user_id=user_id,
                                       start_latitude=user_latitude, start_longitude=user_longitude)
