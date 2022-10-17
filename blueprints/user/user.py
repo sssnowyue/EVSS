@@ -53,7 +53,7 @@ def user_rent():
         # This part added by Shilong to check the state of bike (only state is 1 can be used)
         bike = BikeModel.query.filter_by(id=bike_id, state=1).first()
         if bike is None:
-            flash("error", "The bike cannot be used.")
+            flash("error", "The bike cannot use.")
             return redirect("/account")
         ###################
         pure_rent(bike_id, user_id, user_latitude, user_longitude)
